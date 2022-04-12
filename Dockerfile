@@ -21,8 +21,6 @@ WORKDIR /var/www/html
 #Copia de los archivos de la página, el entrypoint, el fichero de configuración de apache y el fichero de configuración de modsecurity
 COPY public_html /var/www/html/public_html/
 
-COPY entrypoint.sh /var/www/html/
-
 RUN echo "ServerTokens ProductOnly" >> /etc/apache2/apache2.conf
 RUN echo "ServerSignature Off" >> /etc/apache2/apache2.conf
 
